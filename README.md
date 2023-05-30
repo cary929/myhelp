@@ -32,14 +32,17 @@ linux_shell_自定义命令管理助手
    > \#=====myhelp_cmd=====
    >
 
-4. 以后将您自定义的命令都添加在 #=====myhelp_cmd===== 行之后, 改行为匹配行, 请参考以下 .bashrc 文件范例
+4. 以后将您自定义的命令都添加在 #=====myhelp_cmd===== 行之后, 该行为匹配标记, 配置文件代码请参考 .bashrc 文件范例
 
-    >....
+    > ...     \# .bashrc 原有代码
     >
-    >.bashrc原有代码
     >#=====myhelp=====
+    >
     >alias myhelp='sh ~/myhelp.sh'
+    >
     >#=====myhelp_cmd=====
+    >
+    > \# ==下面为添加的自定义命令==
     >
     ># [apache]
     >alias apache_start='sudo apachectl start'
