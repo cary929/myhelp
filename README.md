@@ -9,11 +9,11 @@ linux_shell_自定义命令管理助手
 * myhelp cmd
 
     显示自定义的命令
-    [cmd.png](image/cmd.png)
+    ![cmd.png](image/cmd.png)
 * myhelp note
 
     显示通用笔记
-    [note.png](image/note.png)
+   ![note.png](image/note.png)
 * myhelp local
 
     显示本地笔记
