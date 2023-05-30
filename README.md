@@ -34,25 +34,25 @@ linux_shell_自定义命令管理助手
 
 4. 以后将您自定义的命令都添加在 #=====myhelp_cmd===== 行之后, 改行为匹配行, 请参考以下 .bashrc 文件范例
 
-    ....
-
-    .bashrc原有代码
-    #=====myhelp=====
-    alias myhelp='sh ~/myhelp.sh'
-    #=====myhelp_cmd=====
-
-    # [apache]
-    alias apache_start='sudo apachectl start'
-    alias apache_stop='sudo apachectl stop'
-    alias apache_restart='sudo apachectl restart'
-
-    # [web]
-    alias dj='python manage.py '
-    alias cd_www='cd /var/www'
-    alias env_start='source ./env/bin/activate'
-
-    # [supervisor]
-    alias supervisor_stop='supervisorctl shutdown'
+    >....
+    >
+    >.bashrc原有代码
+    >#=====myhelp=====
+    >alias myhelp='sh ~/myhelp.sh'
+    >#=====myhelp_cmd=====
+    >
+    ># [apache]
+    >alias apache_start='sudo apachectl start'
+    >alias apache_stop='sudo apachectl stop'
+    >alias apache_restart='sudo apachectl restart'
+    >
+    ># [web]
+    >alias dj='python manage.py '
+    >alias cd_www='cd /var/www'
+    >alias env_start='source ./env/bin/activate'
+    >
+    ># [supervisor]
+    >alias supervisor_stop='supervisorctl shutdown'
 
 
 
@@ -73,7 +73,7 @@ linux_shell_自定义命令管理助手
 >bash_path=$root_path"/.bashrc"  \# bash配置文件路径
 >
 >note_path=$root_path"/myhelp_note.txt"   # 通用笔记路径
-
+>
 >local_path=$HOME"/myhelp_local.txt"   # 本地笔记路径
 >
 > \# 远程同步笔记URL, 通常存放在外网, 用于存放个人常用的命令或者辅助性的内容, 没有具体格式要求, 可多端(多服务器)下同步

@@ -1,0 +1,5 @@
+zsh_path=/Users/cary/.zshrc
+bash_path=/Users/cary/.bashrc
+note_path=/Users/cary/myhelp_note.txt
+local_path=/Users/cary/myhelp_local.txt
+sync_url="http://xxx.com/myhelp.txt"  # 远端同步URL,  请替换xxx.com为您的域名

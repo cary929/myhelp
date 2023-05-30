@@ -1,0 +1,46 @@
+#=====mynote=====
+
+***************************************
+*             常用帮助                 *
+***************************************
+
+[ pip 命令]
+清华：https://pypi.tuna.tsinghua.edu.cn/simple
+阿里云：http://mirrors.aliyun.com/pypi/simple/
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+华中理工大学：http://pypi.hustunique.com/
+山东理工大学：http://pypi.sdutlinux.org/
+豆瓣：http://pypi.douban.com/simple/
+
+永久修改 https://raoyangsheng.com/2018/09/it-python-01.html
+[临时使用[源]安装]      pip -i https://pypi.tuna.tsinghua.edu.cn/simple django
+
+
+[ screen命令 ]
+[新建]                    screen -S name
+[列表]                    screen -ls
+[打开]                    screen -r [screen_id]或name
+[暂时退出当前窗口]          先按Ctrl+A  再按 D
+[杀掉当前窗口]            Ctrl+A  K
+[无法正常登录]            screen -D -r 先踢掉前一用户，再登陆。
+[分享]                    screen -x name
+[终止]                   1.$ exit     或者    2.$ CTRL + D
+[查看一个screen里的输出]     Ctrl + a ESC
+
+
+[ vim ]
+[查找]            / 或 ? + 关键词
+[搜索下一项 ]      n
+[保存&退出]       :wq
+
+
+
+
+***************************************
+*           mac 常用命令帮助            *
+***************************************
+===apache===
+[关闭apache随系统启动]     sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+[开启随机启动]            sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+
+
