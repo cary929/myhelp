@@ -1,11 +1,11 @@
 #!/bin/bash
 
-clear
+# echo "\n\n\n\n\n\n"
 version="1.0"
 cfg_path=$HOME"/myhelp_cfg.txt"
 
 if [ -f "$cfg_path" ];then
-  source $cfg_path
+  . ${cfg_path} # source 包含
 else
 cat <<End-of-message
 首次使用, 请编辑配置文件: ${cfg_path}
@@ -16,23 +16,27 @@ zsh_path=$HOME/.zshrc
 bash_path=$HOME/.bashrc
 note_path=$HOME/myhelp_note.txt
 local_path=$HOME/myhelp_local.txt
-sync_url="http://xxx.com/myhelp.txt"  # 远端同步URL,  请替换xxx.com为您的域名
+sync_url=""  # 远端同步URL,  类似 http://xxx.com/myhelp.txt
 End-of-message
 exit;
 fi
 
 cat <<End-of-message
----------------------------------------------------
-	服务器命令行管理助手 ${version}
-  https://github.com/cary929/myhelp
----------------------------------------------------
-	命令:  #myhelp [参数]
-	参数:
-	  cmd          显示个人添加的自定义命令
-	  note         显示笔记, 可从远端获取
-	  local        显示本地笔记, 只在本机使用, 不同步
-	  sync         获取远端帮助文件内容, 并覆盖本地的文件
----------------------------------------------------
+
+
+
+-------------------------------------------------------------------------
+          服务器命令行管理助手 ${version}
+          https://github.com/cary929/myhelp
+-------------------------------------------------------------------------
+          命令:  #myhelp [参数]
+          参数:
+            cmd          显示个人添加的自定义命令
+            note         显示笔记, 可从远端获取
+            local        显示本地笔记, 只在本机使用, 不同步
+            sync         获取远端帮助文件内容, 并覆盖本地的文件
+-------------------------------------------------------------------------
+
 End-of-message
 
 for var in $*
@@ -66,17 +70,17 @@ End-of-message
           exit;;
       "cmd")
           if [ -f "$zsh_path" ];then
-            grep -A 200  =====myhelp_cmd===== $zsh_path
+            grep -A 200  =====myhelp_cmd===== ${zsh_path}
           else
-            grep -A 100  =====myhelp_cmd===== $bash_path
+            grep -A 50  =====myhelp_cmd===== ${bash_path}
           fi
           exit;;
       "sync" )
           if [ -z "$sync_url" ];then
-            echo 'sync url is empty.'
+            echo '同步URL未配置.'
           else
             wget -P ~ -O "${note_path}" -q ${sync_url}
-            echo 'update success'
+            echo '同步成功'
           fi
           exit;;
       "version" ) echo "Version: ${version}"
