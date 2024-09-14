@@ -1,5 +1,6 @@
 # myhelp
 linux_shell_自定义命令管理助手
+功能: 方便查看自定义命令, 以及同步一个远程 文本文件
 
 ## 使用场景
 * myhelp
@@ -12,20 +13,20 @@ linux_shell_自定义命令管理助手
     ![cmd.png](image/cmd.png)
 * myhelp note
 
-    显示通用笔记
+    显示通用笔记 ,  远程同步的文本文件,  
    ![note.png](image/note.png)
 * myhelp local
 
-    显示本地笔记
+    显示本地笔记, 仅适用于当前服务器的 文本文件
 * myhelp sync
 
-    同步通用笔记
+    同步通用笔记,从远程服务器拉取 通用文本文件
 
 ## 如何使用
 
-1. 在home目录下创建myhelp.sh
+1. 将 myhelp.sh 复制到在home目录下
 2. 给文件添加执行权限: chmod +x ~/myhelp.sh
-3. 打开您的Shell终端(zsh,bash等)的配置文件, 如 ~/.bashrc 或 ~/.zshrc 等, 在文件末尾添加命令别名myhelp, 添加代码如下:
+3. 打开您的Shell终端(zsh,bash等)的配置文件, 如 ~/.bashrc 或 ~/.zshrc 等, 在文件末尾添加命令别名: myhelp, 添加代码如下:
 
    > \#=====myhelp=====
    >
@@ -34,7 +35,7 @@ linux_shell_自定义命令管理助手
    > \#=====myhelp_cmd=====
    >
 
-4. 以后将您自定义的命令都添加在 #=====myhelp_cmd===== 行之后, 该行为匹配标记, 配置文件代码请参考 .bashrc 文件范例
+4. 将您自定义的命令都添加在 #=====myhelp_cmd===== 行之后, 该行 作为匹配标记, 配置文件代码请参考 .bashrc 文件范例
 
     > ...     \# .bashrc 原有代码
     >
